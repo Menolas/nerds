@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Елена Кунина](https://up.htmlacademy.ru/htmlcss/16/user/234524).
-* Наставник: `Неизвестно`.
+* Наставник: [Макс Масленко](https://htmlacademy.ru/profile/biggus-dickus).
 
 ---
 
