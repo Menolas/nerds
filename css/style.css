@@ -1,0 +1,21 @@
+body {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: normal;
+  font-family: "Roboto";
+}
+.title-main {
+  font-size: 55px;
+  line-height: 55px;
+  color: #000000;
+  font-weight: bold;
+  font-family: "Roboto";
+}
+.title-secondary {
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+  font-weight: bold;
+  font-family: "Roboto";
+}
