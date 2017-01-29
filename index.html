@@ -8,30 +8,28 @@
   <body>
 
     <header class="main-header">
-      <div class="wrap">
-        <div class="header-top"> 
+      <div class="wrap clearfix">
+        <nav class="main-nav">
           <a class="logo">
             <img src="img/content/nerds-logo.png" width="165" height="65" alt="Лого">
           </a>
-          <nav class="main-nav">
-            <ul>
-              <li>
-          	    <a href="#">Студия</a>
-              </li>
-              <li>
-          	    <a href="#">Клиенты</a>
-              </li>
-              <li>
-          	    <a href="catalog.html">Магазин</a>
-              </li>
-              <li>
-          	    <a href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="user-block">
-      	    <a href="#">Корзина</a>
-          </div>
+          <ul>
+            <li>
+          	  <a href="#">Студия</a>
+            </li>
+            <li>
+          	  <a href="#">Клиенты</a>
+            </li>
+            <li>
+          	  <a href="catalog.html">Магазин</a>
+            </li>
+            <li>
+          	  <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="user-block">
+      	  <a href="#">Корзина</a>
         </div>
       </div>  
     </header>
@@ -66,7 +64,7 @@
     </section>
 
     <main class="wrap">
-      <ul class="advantages">
+      <ul class="advantages clearfix">
         <li>
           <div class="advantage advantage-web">
             <h2 class="title2">Веб-сайты</h2>
@@ -89,41 +87,43 @@
           </div>
         </li>  
       </ul>
-      <section class="promo-text">
-        <h2 class="title-secondary">Мы — маленькая, но гордая дизайн-студия из Краснодара.</h2>
-        <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет
-        превыше креатива. Работаем не покладая рук, как роботы.</p>
-        <h3 class="title3">Выполняем заказы на разработку:</h3>
-        <ul class="features">
-          <li>
-            Веб-сайтов любой сложности
-          </li>
-          <li>
-            Мобильных приложений для IOS и Android
-          </li>
-          <li>  
-            Слайдшоу и видео для корпоративных презентаций
-          </li>  
-        </ul>
-      </section>
-      <div class="promo-block-main">
-      	<h5>С 2004 года любим точность во всем:</h5>
-      	<ul class="percents">
-      	  <li>
-      	    <span class="number">146%</span>
-      	    <span class="number-item">Уровень самоотдачи</span>
-      	  </li>
-      	  <li>
-      	    <span class="number">100%</span>
-      	    <span class="number-item">Соблюдение сроков</span>
-      	  </li>
-      	  <li>
-      	    <span class="number">50%</span>
-      	    <span class="number-item">Минимальная предоплата</span>
-      	  </li>
-      	</ul>
-      </div>
-      <div class="logos">
+      <div class="promo clearfix">
+        <section class="promo-text">
+          <h2 class="title-secondary">Мы — маленькая, но гордая дизайн-студия из Краснодара.</h2>
+          p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет
+          превыше креатива. Работаем не покладая рук, как роботы.</p>
+          <h3 class="title3">Выполняем заказы на разработку:</h3>
+          <ul class="features">
+            <li>
+              Веб-сайтов любой сложности
+            </li>
+            <li>
+              Мобильных приложений для IOS и Android
+            </li>
+            <li>  
+              лайдшоу и видео для корпоративных презентаций
+            </li>  
+          </ul>
+        </section>
+        <div class="promo-block-main">
+      	  <h5>С 2004 года любим точность во всем:</h5>
+      	  <ul class="percents">
+      	    <li>
+      	      <span class="number">146%</span>
+      	      <span class="number-item">Уровень самоотдачи</span>
+      	    </li>
+      	    <li>
+      	      <span class="number">100%</span>
+      	      <span class="number-item">Соблюдение сроков</span>
+      	    </li>
+      	    <li>
+      	      <span class="number">50%</span>
+      	      <span class="number-item">Минимальная предоплата</span>
+      	    </li>
+      	  </ul>
+        </div>
+      </div>  
+      <div class="logos clearfix">
       	<img src="img/content/htmlacademy-logo.png" width="200" height="68" alt="HTML Academy">
       	<img src="img/content/borodinski-logo.png" width="209" height="90" alt="BORODINSKI">
         <img src="img/content/pink-logo.png" width="185" height="51" alt="Pink">
@@ -132,7 +132,7 @@
 
     </main>
 
-    <footer class="main-footer wrap">
+    <footer class="main-footer">
       <div class="map">
         <img src="img/content/map.jpg" width="1440" height="416" alt="Карта">
       	<div class="mail-us">
@@ -144,15 +144,17 @@
       	  <a class="btn" href="#">Напишите нам</a>
       	</div>
       </div>
-      <div class="social-footer">
-        <a class="social-btn-vk" href="#">Вконтакте</a>
-        <a class="social-btn-fb" href="#">Фейсбук</a>
-        <a class="social-btn-inst" href="#">Инстаграм</a>
-      </div>
-      <div class="friendship">
-      	<b>Давайте дружить, это выгодно!</b>
-      	<p>Скидка 10% для друзей из социальных сетей.</p>
-      </div>
+      <div class="footer-bottom wrap clearfix">
+        <div class="social-footer">
+          <a class="social-btn-vk" href="#">Вконтакте</a>
+          <a class="social-btn-fb" href="#">Фейсбук</a>
+          <a class="social-btn-inst" href="#">Инстаграм</a>
+        </div>
+        <div class="friendship">
+      	  <b>Давайте дружить, это выгодно!</b>
+      	  <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </div>  
     </footer>
 
     <form class="write-us" action="?" method="post" name="write-us">
