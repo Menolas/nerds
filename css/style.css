@@ -52,6 +52,20 @@ body {
 .slider {
   margin-bottom: 80px;
 }
+.slider-switch {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  outline: 1px solid red;
+}
+.slider-switch-item {
+  display: inline-block;
+  width: 0;
+  border: 10px solid black;
+  border-radius: 15px;
+}
 .advantages {
   padding: 0;
   margin: 0;
@@ -80,7 +94,65 @@ body {
   margin-bottom: 85px;
 }
 .logos {
+  margin-left: 30px;
   margin-bottom: 82px;
+}
+.company-logo {
+  display: inline-block;
+  margin-right: 100px;
+  vertical-align: middle;
+}
+.company-logo:last-child {
+  margin-right: 0;
+}
+aside {
+  float: left;
+  width: 260px;
+  margin-top: 59px;
+  margin-right: 140px;
+  outline: 1px solid red;
+}
+.gallery {
+  float: right;
+  width: 760px;
+  margin-top: 59px;
+  outline: 1px solid red;
+}
+.sorter :{
+  margin-bottom: 60px;
+}
+.sorter-list {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sorter-item {
+  display: inline-block;
+}
+.items {
+  margin-bottom: 60px;
+  outline: 1px solid red;
+}
+.gallery-item {
+  display: inline-block;
+  width: 360px;
+  margin-right: 40px;
+  margin-left: 0;
+}
+.gallery-item:nth-child(2n) {
+  float: right;
+  margin-right: 0;
+}
+.paginator {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 60px;
+}
+.paginator-item {
+  display: inline-block;
+  margin-right: 10px;
 }
 .map {
   margin-bottom: 68px;
