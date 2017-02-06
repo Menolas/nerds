@@ -33,17 +33,17 @@
       	  <a href="#">Корзина</a>
         </div>
       </div>
-      <h1 class="main-title">Магазин готовых шаблонов</h1>
+      <h1 class="title-main catalog-title">Магазин готовых шаблонов</h1>
     </div>
   </header>
 
   <main class="wrap clearfix">
-    <aside>
+    <aside class="choice-form">
       <form class="choice" action="?" method="get" name="filter-form">
         <label for="price-range-field">Смоимость:</label>
         <input type="range" name="price-range" id="price-range-field" min="0" max="15000" step="100">
         <p>от <output id="from">0</output> до <output id="to">15000</output></p>
-        <fieldset>
+        <fieldset style="margin: 0; padding: 0; border: 0;">
         	<legend>Сетка:</legend>
         	<input type="radio" name="grid" id="adaptive" value="adaptive" checked>
         	<label for="adaptive">Адаптивная</label>
@@ -52,7 +52,7 @@
         	<input type="radio" name="grid" id="fluid" value="fluid">
         	<label for="fluid">Резиновая</label>
         </fieldset>
-        <fieldset>
+        <fieldset style="margin: 0; padding: 0; border: 0;">
         	<legend>Особенности:</legend>
         	<input type="checkbox" name="slider" id="slider-field" checked>
         	<label for="slider-field">Слайдер</label>
@@ -173,11 +173,11 @@
     <div class="map">
       <img src="img/content/map.jpg" width="1440" height="416" alt="Карта">
       <div class="mail-us">
-        <h3>Nërds design studio</h3>
+        <h3 class="title-third-tipe">Nërds design studio</h3>
         <address>
       	  191186, Санкт-Петербург, ул Б.Конюшенная, д. 19/8
-      	  тел. +7(812)275-75-75
       	</address>
+        <p class="mail-us-p">тел. +7(812)275-75-75</p>
         <a class="btn" href="#">Напишите нам</a>
       </div>
     </div>
