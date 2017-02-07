@@ -481,7 +481,7 @@ input[type="range"] {
 }
 .grid label,
 .hangs label {
-  display: inline-block;
+  display: block;
   font-size: 16px;
   line-height: 1.25;
   font-weight: normal;
@@ -506,6 +506,8 @@ input[type="range"] {
   display: inline-block;
 }
 .items {
+  margin-bottom: 60px;
+  font-size: 0;
   outline: 1px solid red;
 }
 .gallery-item {
@@ -564,8 +566,6 @@ input[type="range"] {
   display: block;
 }
 .paginator {
-  display: inline-block;
-  width: 190px;
   padding: 0;
   margin: 0;
   margin-bottom: 60px;
@@ -574,8 +574,7 @@ input[type="range"] {
 }
 .paginator-item {
   display: inline-block;
-  vertical-align: middle;
-  margin-top: 59px;
+  vertical-align: top;
   margin-right: 10px;
 }
 .paginator-item a {
@@ -592,9 +591,17 @@ input[type="range"] {
   text-align: center;
   vertical-align: middle;
 }
+.paginator-item a:hover {
+  background-color: #dfdfdf;
+}
+.paginator-item a:active {
+  background-color: #d5d5d5;
+}
+.paginator-item .active {
+  background-color: #fff;
+  border: 3px solid #dbdbdb;
+}
 .gallery .next {
-  display: inline-block;
-  margin-top: 59px;
   padding: 16px 77px;
 }
 .show {
