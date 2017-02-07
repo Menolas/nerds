@@ -27,6 +27,7 @@ body {
   color: #000;
   font-size: 18px;
   line-height: 1.66;
+  font-weight: bold;
   text-transform: uppercase;
 }
 .clearfix::after {
@@ -44,11 +45,14 @@ body {
 .btn {
   display: inline-block;
   padding: 16px 44px;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 1.125;
+  font-weight: medium;
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
   background-color: #fb565a;
-  border-radius: 3px;
 }
 .btn:hover {
   background-color: #e74246;
@@ -56,10 +60,11 @@ body {
 .btn:active {
   background-color: #d7373b;
 }
-.main-header {
+header.main-header {
   padding: 0;
   margin: 0;
   background-color: #eee;
+  outline: 1px solid red;
 }
 .main-nav {
   float: left;
@@ -112,10 +117,10 @@ body {
   padding-left: 24px;
   font-size: 16px;
   line-height: 1.875;
+  font-weight: medium;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
-  font-weight: medium;
 }
 .main-menu a:active {
   opacity: 0.3;
@@ -158,10 +163,10 @@ body {
   background: transparent url("../img/icons/cart-icon.png") no-repeat 50% 50%;
 }
 .catalog-title {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
+  padding-top: 80px;
   padding-bottom: 104px;
+  text-align: center;
 }
 .sliders {
   margin-bottom: 80px;
@@ -444,12 +449,43 @@ body {
   opacity: 0.1;
 }
 
-.choice-form {
+aside.choice-form {
   float: left;
-  width: 260px;
+  width: 300px;
   margin-top: 59px;
-  margin-right: 140px;
+  margin-right: 100px;
   outline: 1px solid red;
+}
+label[for="price-range-field"] {
+  margin-bottom: 50px;
+}
+input[type="range"] {
+  width: 260px;
+  height: 80px;
+  margin-bottom: 13px;
+  background-color: #eee; 
+}
+.choice output {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80px;
+  text-align: center;
+  margin-left: 12px;
+  margin-right: 34px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  color: #283136;
+  font-size: 16px;
+  line-height: 1.375;
+  background-color: #eee; 
+}
+.grid label,
+.hangs label {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: normal;
+  color: #283136;
 }
 .gallery {
   float: right;
@@ -457,7 +493,7 @@ body {
   margin-top: 59px;
   outline: 1px solid red;
 }
-.sorter :{
+.sorter {
   margin-bottom: 60px;
 }
 .sorter-list {
@@ -470,12 +506,14 @@ body {
   display: inline-block;
 }
 .items {
-  margin-bottom: 60px;
   outline: 1px solid red;
 }
 .gallery-item {
+  position: relative;
   display: inline-block;
+  padding-top: 40px;
   width: 360px;
+  height: 616px;
   margin-right: 40px;
   margin-left: 0;
 }
@@ -483,15 +521,92 @@ body {
   float: right;
   margin-right: 0;
 }
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 40px;
+  background: #e9e9e9 url("../img/icons/browser.png") no-repeat 50% 50%;
+  opacity: 0.12;
+}
+.gallery-item:hover::before {
+  opacity: 1;
+}
+.gallery-item img {
+  border: 1px solid #000101 0.1;
+}
+.description {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px 60px;
+  padding-bottom: 43px;
+  width: 360px;
+  text-align: center;
+  background-color: #eee;
+}
+.description-title {
+  margin: 0;
+}
+.description p {
+  margin-bottom: 32px;
+  font-size: 16px;
+  line-height: 1.125;
+  color: #666;
+}
+.description .btn {
+  padding: 16px 60px;
+}
+.gallery-item:hover .description {
+  display: block;
+}
 .paginator {
-  list-style: none;
+  display: inline-block;
+  width: 190px;
   padding: 0;
   margin: 0;
   margin-bottom: 60px;
+  list-style: none;
+  outline: 1px solid red;
 }
 .paginator-item {
   display: inline-block;
+  vertical-align: middle;
+  margin-top: 59px;
   margin-right: 10px;
+}
+.paginator-item a {
+  display: block;
+  padding: 16px;
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 1.125;
+  font-weight: medium;
+  color: #000;
+  text-decoration: none;
+  background-color: #eee;
+  text-align: center;
+  vertical-align: middle;
+}
+.gallery .next {
+  display: inline-block;
+  margin-top: 59px;
+  padding: 16px 77px;
+}
+.show {
+  color: #000;
+  font-weight: medium;
+  background-color: #eee; 
+}
+.show:hover {
+  background-color: #dfdfdf; 
+}
+.show:active {
+  background: rgba(213, 213, 213, 0.3);
 }
 .main-footer {
   margin-top: 82px;
@@ -634,3 +749,4 @@ label {
   padding: 16px 80px;
   margin-top: 48px;
 }
+
