@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
 	<title>Магазин — Нёрдс</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -32,18 +33,29 @@
       	<a href="#">Корзина</a>
       </div>
     </div>
-    <h1 class="title-main catalog-title">Магазин готовых шаблонов
-    </h1>
+    <h1 class="title-main catalog-title">Магазин готовых шаблонов</h1>
   </header>
 
   <main class="wrap clearfix">
     <aside class="choice-form">
       <form class="choice" action="?" method="get" name="filter-form">
-        <label class="title-third-tipe" for="price-range-field">Стоимость:</label>
-        <input type="range" name="price-range" id="price-range-field" min="0" max="15000" step="100">
-        <p>от <output class="from" id="from">0</output> до <output class="to" id="to">15000</output></p>
-        <fieldset class="grid" style="margin: 0; margin-top: 54px; padding: 0; border: 0;">
-        	<legend class="title-third-tipe">Сетка:</legend>
+        <h3 class="title-third-type" for="price-range-field">Стоимость:</h3>
+        <div class="range-filter">
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar" style="margin-left: 20%; width: 30%"></div>
+            </div>
+            <div class="toggle toggle-min"></div>
+            <div class="toggle toggle-max"></div>
+          </div>
+          <div class="price-controls">
+            <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+            <label class="max-price">до <input type="text" name="max-price" value="1500"></label>
+          </div>  
+        </div>
+
+        <fieldset class="grid" style="margin: 0; padding: 0; border: 0;">
+        	<legend class="title-third-type">Сетка:</legend>
         	<input type="radio" name="grid" id="adaptive" value="adaptive" checked>
         	<label for="adaptive">Адаптивная</label>
         	<input type="radio" name="grid" id="fixed" value="fixed">
@@ -51,8 +63,8 @@
         	<input type="radio" name="grid" id="fluid" value="fluid">
         	<label for="fluid">Резиновая</label>
         </fieldset>
-        <fieldset class="hangs" style="margin: 0; margin-top: 45px; padding: 0; border: 0;">
-        	<legend class="title-third-tipe">Особенности:</legend>
+        <fieldset class="hangs" style="margin: 0; padding: 0; border: 0;">
+        	<legend class="title-third-type">Особенности:</legend>
         	<input type="checkbox" name="slider" id="slider-field" checked>
         	<label for="slider-field">Слайдер</label>
         	<input type="checkbox" name="features" id="features-field">
@@ -70,10 +82,10 @@
     
     <section class="gallery">
       <div class="sorter">
-        <b class="title-third-tipe">Сортировать:</b>
+        <b class="title-third-type">Сортировать:</b>
         <ul class="sorter-list"> 
           <li class="sorter-item">
-            <button>по цене</button>
+            <button class="active">по цене</button>
           </li> 
           <li class="sorter-item">
             <button>по типу</button>
@@ -82,7 +94,7 @@
             <button>по названию</button>
           </li>
           <li class="sorter-item">
-            <button class="little-nav down" title="По возрастанию">&#9650;</button>
+            <button class="active little-nav down" title="По возрастанию">&#9650;</button>
           </li>
           <li class="sorter-item">
             <button class="little-nav up" title="По убыванию">&#9660;</button>
@@ -95,7 +107,7 @@
       	    <img src="img/content/sedona.jpg" width="360" height="616" alt="Изображение сайта">
       	  </a>
       	  <figcaption class="description">
-      	    <h3 class="title-third-tipe description-title">Sedona</h3>
+      	    <h3 class="title-third-type description-title">Sedona</h3>
       	    <p>Информационный сайт для туристов</p>
       	    <a href="#" class="btn">9&thinsp;900 руб.</a>	
       	  </figcaption>
@@ -105,7 +117,7 @@
       	    <img src="img/content/pink.jpg" width="360" height="616" alt="Изображение сайта">
       	  </a>
       	  <figcaption class="description">
-      	    <h3 class="title-third-tipe description-title">Pink Upp</h3>
+      	    <h3 class="title-third-type description-title">Pink App</h3>
       	    <p>Продуктовый лендинг приложения OS и Android</p>
       	    <a href="#" class="btn">9&thinsp;900 руб.</a>	
       	  </figcaption>
@@ -115,7 +127,7 @@
       	    <img src="img/content/barbershop.jpg" width="360" height="616" alt="Изображение сайта">
       	  </a>
       	  <figcaption class="description">
-      	    <h3 class="title-third-tipe description-title">Barbershop</h3>
+      	    <h3 class="title-third-type description-title">Barbershop</h3>
       	    <p>Сайт салона красоты. Для мужчин, да.</p>
       	    <a href="#" class="btn">9&thinsp;900 руб.</a>	
       	  </figcaption>
@@ -125,7 +137,7 @@
       	    <img src="img/content/mishka.jpg" width="360" height="616" alt="Изображение сайта">
       	  </a>
       	  <figcaption class="description">
-      	    <h3 class="title-third-tipe description-title">Mishka</h3>
+      	    <h3 class="title-third-type description-title">Mishka</h3>
       	    <p>Интернет-магазин вязаных игрушек</p>
       	    <a href="#" class="btn">9&thinsp;900 руб.</a>	
       	  </figcaption>
@@ -135,7 +147,7 @@
       	    <img src="img/content/a-plus.jpg" width="360" height="616" alt="Изображение сайта">
       	  </a>
       	  <figcaption class="description">
-      	    <h3 class="title-third-tipe description-title">A Plus</h3>
+      	    <h3 class="title-third-type description-title">A Plus</h3>
       	    <p>Лендинг курсов повышения квалификации</p>
       	    <a href="#" class="btn">9&thinsp;900 руб.</a>	
       	  </figcaption>
@@ -145,7 +157,7 @@
       	    <img src="img/content/kvast.jpg" width="360" height="616" alt="Изображение сайта">
       	  </a>
       	  <figcaption class="description">
-      	    <h3 class="title-third-tipe description-title">Кваст</h3>
+      	    <h3 class="title-third-type description-title">Кваст</h3>
       	    <p>Промо-сайт производителя крафтового кваса</p>
       	    <a href="#" class="btn">9&thinsp;900 руб.</a>	
       	  </figcaption>
@@ -165,20 +177,21 @@
           <a href="#" class="btn next show">Следующая</a> 
         </li>  
       </ul>
-       	
     </section>
   </main>
 
   <footer class="main-footer">
     <div class="map">
-      <img src="img/content/map.jpg" width="1440" height="416" alt="Карта">
-      <div class="mail-us">
-        <h3 class="title-third-tipe">Nërds design studio</h3>
-        <address>
+      <img class="map-image" src="img/content/map.jpg" width="1440" height="416" alt="Карта">
+      <div class="wrap">
+        <div class="mail-us">
+          <h3 class="title-third-type mail-us-title">Nërds design studio</h3>
+          <address>
       	  191186, Санкт-Петербург, ул Б.Конюшенная, д. 19/8
-      	</address>
-        <p class="mail-us-p">тел. +7(812)275-75-75</p>
-        <a class="btn" href="#">Напишите нам</a>
+      	  </address>
+          <p class="mail-us-p">тел. +7(812)275-75-75</p>
+          <a class="btn" href="#">Напишите нам</a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom wrap clearfix">
@@ -194,19 +207,28 @@
     </div>  
   </footer>
 
-    <form class="write-us" action="?" method="post" name="write-us">
-    	<fieldset class="write">
-    		<legend class="write-us-title">Напишите нам</legend>
-    		<label for="name-field">Ваше имя:</label>
-    		<input type="text" name="name" id="name-field" placeholder="Представьтесь,пожалуйста">
-    		<label for="e-mail-field">Ваш e-mail:</label>
-    		<input type="email" name="e-mail" id="e-mail-field" placeholder="Для отправки ответа">
-    		<label for="letter-field">Текст письма:</label>
-    		<textarea name="letter" id="letter-field" placeholder="В свободной форме" rows="4">
-    		</textarea>
-    		<input type="submit" class="btn" value="Отправить">
-    	</fieldset>
-    </form>       
+    <div class="modal-content">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <form class="write-us" action="?" method="post" name="write-us">
+        <fieldset class="write">
+          <legend class="write-us-title">Напишите нам</legend>
+          <div class="group name-field-group">
+            <label for="name-field">Ваше имя:</label>
+            <input class="user-name" type="text" name="name" id="name-field" placeholder="Представьтесь,пожалуйста">
+          </div>
+          <div class="group mail-field-group">
+            <label for="e-mail-field">Ваш e-mail:</label>
+            <input class="user-mail" type="email" name="e-mail" id="e-mail-field" placeholder="Для отправки ответа">
+          </div>
+          <div class="note-field-group">
+            <label for="letter-field">Текст письма:</label>
+            <textarea name="letter" id="letter-field" placeholder="В свободной форме" rows="5">
+            </textarea>
+            <input type="submit" class="btn" value="Отправить">
+          </div>
+        </fieldset>
+      </form>    
+    </div>
 
 </body>
 </html>
