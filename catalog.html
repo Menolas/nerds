@@ -212,20 +212,20 @@
       <form class="write-us" action="?" method="post" name="write-us">
         <fieldset class="write">
           <legend class="write-us-title">Напишите нам</legend>
-          <div class="group name-field-group">
-            <label for="name-field">Ваше имя:</label>
-            <input class="user-name" type="text" name="name" id="name-field" placeholder="Представьтесь,пожалуйста">
-          </div>
-          <div class="group mail-field-group">
-            <label for="e-mail-field">Ваш e-mail:</label>
-            <input class="user-mail" type="email" name="e-mail" id="e-mail-field" placeholder="Для отправки ответа">
-          </div>
-          <div class="note-field-group">
-            <label for="letter-field">Текст письма:</label>
-            <textarea name="letter" id="letter-field" placeholder="В свободной форме" rows="5">
-            </textarea>
-            <input type="submit" class="btn" value="Отправить">
-          </div>
+          <div class="clearfix">
+            <div class="pull-left">
+              <label for="name-field">Ваше имя:</label>
+              <input type="text" name="name" id="name-field" placeholder="Представьтесь,пожалуйста">
+            </div>
+            <div class="pull-right">
+              <label for="e-mail-field">Ваш e-mail:</label>
+              <input type="email" name="e-mail" id="e-mail-field" placeholder="Для отправки ответа">
+            </div>
+          </div>  
+          <label for="letter-field">Текст письма:</label>
+          <textarea name="letter" id="letter-field" placeholder="В свободной форме" rows="5">
+          </textarea>
+          <input type="submit" class="btn" value="Отправить">
         </fieldset>
       </form>    
     </div>

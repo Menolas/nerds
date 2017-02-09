@@ -48,7 +48,7 @@ body {
   border-radius: 3px;
   font-size: 16px;
   line-height: 1.125;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
@@ -184,7 +184,6 @@ body {
   height: 18px;
   margin-left: -100px;
   text-align: center;
-  z-index: 1000;
   outline: 1px solid red;
 }
 .slider input[type=radio] {
@@ -720,17 +719,27 @@ input.show:active {
   margin-top: 82px;
   background-color: #fff;
 }
+img {
+  max-width: 100%
+  height: auto;
+}
+.wrap {
+  position: relative;
+}
 .map {
   min-height: 415px;
   background-color: #e9e5dc;
   overflow: hidden;
   margin-bottom: 70px;
 }
-.map .wrap {
+.map img {
   position: absolute;
-}
-.map-image {
-  max-width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: none;
 }
 .mail-us {
   position: absolute;
@@ -827,8 +836,13 @@ input.show:active {
   line-height: 1.37;
   color: #444;
 }
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
 .modal-content {
-  
   position: absolute;
   top: 120px;
   left: 50%;
@@ -839,9 +853,6 @@ input.show:active {
   background-color: #fff;
   box-shadow: 0 30px 50px rgba(0,0,0,0.7);
   outline: 1px solid red; 
-}
-.mail-us .btn:active .modal-content {
-  display: block;
 }
  .modal-content-close {
   position: absolute;
@@ -871,10 +882,6 @@ input.show:active {
 .modal-content-close::after {
   transform: rotate(-45deg);
 }
-.write-us {
-  padding: 0;
-  margin: 0;
-}
 .write {
   border: none;
   padding: 0;
@@ -889,7 +896,6 @@ input.show:active {
   color: #000;
 }
 .write input {
-  float: left;
   margin-right: 40px;
   width: 326px;
   margin: 0;
@@ -918,7 +924,7 @@ input.show:active {
   font-weight: bold;
 }
 .write textarea {
-  width: 760px;
+  width: 100%;
   border: 2px solid #d7dcde;
   border-radius: 3px;
 }
