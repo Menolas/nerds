@@ -43,7 +43,7 @@ body {
   outline: 1px solid red;
 }
 .btn {
-  display: block;
+  display: inline-block;
   padding: 16px 44px;
   border-radius: 3px;
   font-size: 16px;
@@ -161,6 +161,7 @@ body {
   left: 0;
   bottom: 25px;
   background: transparent url("../img/icons/cart-icon.png") no-repeat 50% 50%;
+  opacity: 0.3;
 }
 .catalog-title {
   margin: 0;
@@ -237,9 +238,7 @@ body {
   display: none;
   background: url("../img/content/slide3.png") no-repeat 100% 0;
 }
-.slide {
-  display:;
-}
+
 #btn-1:checked ~ .slide-expensive {
   display: block;
 }
@@ -457,6 +456,7 @@ body {
 }
 .range-filter {
   width: 260px;
+  margin-bottom: 58px; 
 }
 .range-controls {
   position: relative;
@@ -501,16 +501,18 @@ body {
 }
 .price-controls label {
   display: inline-block;
-  width: 50%;
   font-size: 16px;
+  color: #283136;
+  text-transform: uppercase;
 }
 .max-price {
   text-align: right;
 }
 .price-controls input {
-  margin-left: 10px;
-  width: 60px;
-  padding: 8px 10px;
+  margin-left: 12px;
+  margin-right: 30px;
+  width: 80px;
+  padding: 8px 0;
   border: none;
   border-radius: 5px; 
   font-family: 'Roboto', 'Arial', sans-serif;
@@ -519,42 +521,73 @@ body {
   color: #283136;
   background-color: #eee;
 }
-
+.price-controls input[name="max-price"] {
+  margin-right: 0;
+}
+.grid label:last-child {
+  margin-bottom: 32px;
+}
+.grid label:first-child,
+.hangs label:first-child {
+  margin-top: 10px;
 }
 .grid label,
 .hangs label {
-  
+  position: relative;
+  display: inline-block;
+  padding: 10px 36px;
   font-size: 16px;
-  line-height: 1.25;
-  font-weight: normal;
+  line-height: 1,25;
   color: #283136;
+}
+.grid input:hover label,
+.hangs input:hover label {
+  color: #000;
 }
 .grid input,
 .hangs input {
-  display: block;
-  float: left;
+  display: none;
+  padding: 10px 0;
+  width: 36px;
+}
+.grid label:before {
+  position: absolute;
+  content: "";
+  left: 2px;
+  top: 13px;
+  width: 17px;
+  height: 17px;
+  border: 3px solid #000101;
+  border-radius: 50px;
+  background-color: #fff;
+  opacity: 0.4; 
+}
+.grid input:checked .grid label:before {
+  width: 7px;
+  height: 7px;
+  border: 
+    5px solid #fff,
+    3px solid #000101;
+  background-color: #000101;
+
+}
+.hangs label:before {
+  position: absolute;
+  content: "";
+  left: 2px;
+  top: 13px;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #000101;
+  border-radius: 5px;
+  background-color: #fff; 
+  opacity: 0.4;
 }
 input.show {
-  padding: 0;
-  margin: 0;
-  background: none;
+  margin-top: 50px;
+  padding: 16px 87px; 
   border: none;
-}
-input.show {
-  margin-top: 48px;
-  padding: 16px 88px;
-  font-size: 16px;
-  line-height: 1.125;
-  font-weight: medium;
-  color: #000;
-  background-color: #eee; 
-}
-input.show:hover {
-  background-color: #dfdfdf;
-}
-input.show:active {
-  background-color: #dfdfdf;
-  box-shadow: inset 0 2px 0 0;
+
 }
 .gallery {
   float: right;
@@ -576,28 +609,36 @@ input.show:active {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 372px;
+  font-size: 0;
 }
 .sorter-item {
   display: inline-block;
   padding: 0;
   margin: 0;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .sorter-item button {
   display: block;
   margin:0;
-  padding: 15px;
+  padding: 12px;
   background: none;
   border: none;
   font-size: 14px;
   line-height: 1.28;
-  font-weight: normal;
+  font-weight: 400;
   color: #000;
   text-transform: uppercase;
   opacity: 0.3;
 }
+.sorter-item .little-nav {
+  padding-right: 0;
+  padding-left: 20px;
+  font-size: 10px;
+}
 .sorter-item button:hover {
   opacity: 0.6;
+  cursor: pointer;
 }
 .sorter-item button:active {
   opacity: 1;
@@ -684,7 +725,7 @@ input.show:active {
   height: 50px;
   font-size: 16px;
   line-height: 1.125;
-  font-weight: medium;
+  font-weight: 500;
   color: #000;
   text-decoration: none;
   background-color: #eee;
@@ -702,11 +743,14 @@ input.show:active {
   border: 3px solid #dbdbdb;
 }
 .gallery .next {
-  padding: 16px 77px;
+  padding: 16px 87px;
+  width: 105px;
 }
 .show {
+  font-size: 16px;
+  line-height: 1.125;
   color: #000;
-  font-weight: medium;
+  font-weight: 400;
   background-color: #eee; 
 }
 .show:hover {
@@ -723,10 +767,8 @@ img {
   max-width: 100%
   height: auto;
 }
-.wrap {
-  position: relative;
-}
 .map {
+  position: relative;
   min-height: 415px;
   background-color: #e9e5dc;
   overflow: hidden;
@@ -785,39 +827,35 @@ img {
 }
 .social-btn {
   display: inline-block;
-  width: 80px;
-  height: 80px;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
   margin-right: 12px;
   vertical-align: top;
   font-size: 0;
+  background-color: #e1e1e1;
+}
+.social-btn:hover {
+  background-color: #e74246;
+}
+.social-btn:active {
+  background-color: #d7373b;
 }
 .vk {
-  background: #fff url("../img/icons/vk.png") no-repeat 50% 50%;
-}
-.vk:hover {
-  background: #fff url("../img/icons/vk-hover.png") no-repeat 50% 50%;
-}
-.vk:active {
-  background: #fff url("../img/icons/vk-active.png") no-repeat 50% 50%;
+  background-image: url("../img/icons/vk-icon.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 .fb {
-  background: #fff url("../img/icons/fb.png") no-repeat 50% 50%;
-}
-.fb:hover {
-  background: #fff url("../img/icons/fb-hover.png") no-repeat 50% 50%;
-}
-.fb:active {
-  background: #fff url("../img/icons/fb-active.png") no-repeat 50% 50%;
+  background-image: url("..img/icons/fb-icon.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 .inst {
-  background: #fff url("../img/icons/inst.png") no-repeat 50% 50%;
+  background-image: url("../img/icons/insta-icon.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
-.inst:hover {
-  background: #fff url("../img/icons/inst-hover.png") no-repeat 50% 50%;
-}
-.inst:active {
-  background: #fff url("../img/icons/inst-active.png") no-repeat 50% 50%;
-}    
 .friendship {
   float: left;
   width: 760px;
@@ -843,6 +881,7 @@ img {
   float: right;
 }
 .modal-content {
+  display: none;
   position: absolute;
   top: 120px;
   left: 50%;
