@@ -27,7 +27,7 @@ body {
   color: #000;
   font-size: 18px;
   line-height: 1.66;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
 }
 .clearfix::after {
@@ -167,7 +167,7 @@ body {
 }
 .catalog-title {
   margin: 0;
-  padding-top: 80px;
+  padding-top: 67px;
   padding-bottom: 104px;
   text-align: center;
 }
@@ -495,14 +495,17 @@ body {
 .choice-form {
   float: left;
   width: 260px;
-  margin-top: 45px;
+  margin-top: 57px;
   margin-right: 100px;
-  padding-top: 15px;
   outline: 1px solid red;
 }
+.range-filter-title {
+  margin: 0;
+}
 .range-filter {
+  padding: 50px 0 20px;
   width: 260px;
-  margin-bottom: 58px; 
+  margin-bottom: 30px; 
 }
 .range-controls {
   position: relative;
@@ -520,7 +523,8 @@ body {
   background-color: #d7dcde;
 }
 .range-controls .bar {
-  width: 70%;
+  margin-left: 8%;
+  width: 50%;
   height: 2px;
   background-color: #00ca74;
 }
@@ -535,6 +539,7 @@ body {
   border-radius: 50%; 
   background-color: #ababab;
   box-shadow: 0 2px 1px 0 #cfcfcf;
+  box-sizing: content-box;
 }
 .range-controls .toggle-min {
   left: 20px;
@@ -573,19 +578,20 @@ body {
 .grid,
 .hangs {
   margin: 0;
-  margin-bottom: 30px; 
+  margin-bottom: 25px; 
   padding: 0;
   border: none;
 }
 .grid legend,
 .hangs legend {
   padding: 10px 0;
+  padding-bottom: 7px;
 }
 .grid label,
 .hangs label {
   position: relative;
   display: inline-block;
-  padding: 10px 36px;
+  padding: 10px 36px 10px;
   font-size: 16px;
   line-height: 1.25;
   color: #283136;
@@ -600,10 +606,10 @@ body {
   position: absolute;
   content: "";
   left: 2px;
-  top: 10px;
+  top: 5px;
   width: 17px;
   height: 17px;
-  border: 3px solid #000101;
+  border: 3px solid #4d4d4d;
   border-radius: 50px;
   background-color: #fff;
   opacity: 0.4;
@@ -611,7 +617,7 @@ body {
 }
 .grid input:checked + label:before {
   left: 5px;
-  top: 13px;
+  top: 8px;
   width: 7px;
   height: 7px;
   border: 5px solid #fff;
@@ -625,7 +631,7 @@ body {
   position: absolute;
   content: "";
   left: 2px;
-  top: 10px;
+  top: 8px;
   width: 17px;
   height: 17px;
   border: 2px solid #000101;
@@ -639,28 +645,28 @@ body {
   content: "";
 
 }
-.grid input:hover + label:before,
-.hangs input:hover + label:before {
+.grid input:focus + label:before,
+.hangs input:focus + label:before {
   opacity: 1;
 }
-.grid input:hover + label,
-.hangs input:hover + label {
+.grid input:focus + label,
+.hangs input:focus + label {
   color: #000;
 }
 input.show {
+  margin-top: 14px;
   padding: 16px 87px; 
   border: none;
 }
 .gallery {
   float: right;
   width: 760px;
-  margin-top: 45px;
-  padding-top: 15px;
+  margin-top: 57px;
   outline: 1px solid red;
 }
 .sorter {
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   padding: 0;
 }
 .sorter .title-third-tipe {
@@ -683,7 +689,7 @@ input.show {
 .sorter-item button {
   display: block;
   margin:0;
-  padding: 12px;
+  padding: 8px 12px 12px 12px;
   background: none;
   border: none;
   font-size: 14px;
@@ -709,7 +715,7 @@ input.show {
   opacity: 1;
 }
 .items {
-  margin-bottom: 60px;
+  
   font-size: 0;
   outline: 1px solid red;
 }
@@ -721,6 +727,7 @@ input.show {
   height: 616px;
   margin-right: 40px;
   margin-left: 0;
+  margin-bottom: 40px;
 }
 .gallery-item:nth-child(2n) {
   float: right;
@@ -738,9 +745,6 @@ input.show {
 }
 .gallery-item:hover::before {
   opacity: 1;
-}
-.gallery-item img {
-  border: 1px solid #000101;
 }
 .description {
   display: none;
@@ -771,7 +775,7 @@ input.show {
 .paginator {
   padding: 0;
   margin: 0;
-  margin-bottom: 60px;
+  margin-top: 20px;
   list-style: none;
   outline: 1px solid red;
 }
@@ -809,10 +813,7 @@ input.show {
   width: 105px;
 }
 .show {
-  font-size: 16px;
-  line-height: 1.125;
   color: #000;
-  font-weight: 400;
   background-color: #eee; 
 }
 .show:hover {
@@ -820,6 +821,9 @@ input.show {
 }
 .show:active {
   background: rgba(213, 213, 213, 0.3);
+}
+.main {
+  margin-bottom: 62px;
 }
 .main-footer {
   margin-top: 82px;
@@ -834,7 +838,6 @@ img {
   min-height: 415px;
   background-color: #e9e5dc;
   overflow: hidden;
-  margin-bottom: 70px;
 }
 .map .wrap {
   min-height: 415px;
@@ -948,7 +951,7 @@ img {
   float: right;
 }
 .modal-content {
-  display: ;
+  display: none;
   position: absolute;
   top: 120px;
   left: 50%;
@@ -1029,7 +1032,7 @@ img {
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 1.125;
-  font-weight: bold;
+  font-weight: 700;
 }
 .write textarea {
   width: 100%;
