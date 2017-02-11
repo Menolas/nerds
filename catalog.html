@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 	<title>Магазин — Нёрдс</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -53,16 +53,16 @@
             <label class="max-price">до<input type="text" name="max-price" value="1500"></label>
           </div>  
         </div>
-        <fieldset class="grid" style="margin: 0; padding: 0; border: 0;">
+        <fieldset class="grid">
         	<legend class="title-third-type">Сетка:</legend>
-        	  <input type="radio" name="grid" id="adaptive" value="  adaptive" checked>
+        	  <input type="radio" name="grid" id="adaptive" value="adaptive" checked>
         	  <label for="adaptive">Адаптивная</label>
         	  <input type="radio" name="grid" id="fixed" value="fixed">
         	  <label for="fixed">Фиксированная</label>
         	  <input type="radio" name="grid" id="fluid" value="fluid">
         	  <label for="fluid">Резиновая</label>
         </fieldset>
-        <fieldset class="hangs" style="margin: 0; padding: 0; border: 0;">
+        <fieldset class="hangs">
         	<legend class="title-third-type">Особенности:</legend>
         	  <input type="checkbox" name="slider" id="slider-field" checked>
         	  <label for="slider-field">Слайдер</label>
@@ -220,8 +220,7 @@
             </div>
           </div>  
           <label for="letter-field">Текст письма:</label>
-          <textarea name="letter" id="letter-field" placeholder="В свободной форме" rows="5">
-          </textarea>
+          <textarea name="letter" id="letter-field" placeholder="В свободной форме" rows="5"></textarea>
           <input type="submit" class="btn" value="Отправить">
         </fieldset>
       </form>    
