@@ -59,6 +59,7 @@ body {
   background-color: #e74246;
 }
 .btn:active {
+  color: rgba(255,255,255,0.3);
   background-color: #d7373b;
 }
 .main-header {
@@ -233,11 +234,8 @@ body {
   margin-top: 25px;
   margin-bottom: 42px;
 }
-
 .slide .btn {
-
-  width: 240px;
-  background-color: #fb565a;
+  padding: 16px 52px;
 }
 .slide-expensive {
   display: none;
@@ -280,7 +278,6 @@ body {
 #btn-3:checked ~ .slide-night {
   display: block;
 }
-
 .advantages {
   padding: 0;
   padding-bottom: 80px;
@@ -606,48 +603,54 @@ body {
   position: absolute;
   content: "";
   left: 2px;
-  top: 5px;
+  top: 7px;
   width: 17px;
   height: 17px;
-  border: 3px solid #4d4d4d;
+  border: 3px solid #000;
   border-radius: 50px;
   background-color: #fff;
   opacity: 0.4;
   box-sizing: content-box; 
 }
+.grid input[type="checkbox"]:focus + label {
+  color: #000;
+}
+.grid input:focus + label:before {
+    border-color: #4d4d4d;
+    opacity: 1;
+    cursor: pointer;
+}
 .grid input:checked + label:before {
   left: 5px;
-  top: 8px;
+  top: 10px;
   width: 7px;
   height: 7px;
   border: 5px solid #fff;
   border-radius: 50px; 
-  background-color: #4d4d4d;
-  box-shadow: 0 0 0 3px #4d4d4d;
-  opacity: 0.4;
-  box-sizing: content-box;
-}
-.hangs label:before {
-  position: absolute;
-  content: "";
-  left: 2px;
-  top: 8px;
-  width: 17px;
-  height: 17px;
-  border: 2px solid #000101;
-  border-radius: 5px;
-  background-color: #fff; 
+  background-color: #000;
+  box-shadow: 0 0 0 3px #000;
   opacity: 0.4;
   box-sizing: content-box;
 }
 .hangs input:checked + label:before {
   position: absolute;
   content: "";
-
+  background-image: url("..img/sprite/sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
 }
-.grid input:focus + label:before,
-.hangs input:focus + label:before {
-  opacity: 1;
+.hangs label:before {
+  position: absolute;
+  content: "";
+  left: 2px;
+  top: 6px;
+  width: 19px;
+  height: 19px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  background-color: #fff; 
+  opacity: 0.4;
+  box-sizing: content-box;
 }
 .grid input:focus + label,
 .hangs input:focus + label {
@@ -715,7 +718,6 @@ input.show {
   opacity: 1;
 }
 .items {
-  
   font-size: 0;
   outline: 1px solid red;
 }
@@ -724,10 +726,10 @@ input.show {
   display: inline-block;
   padding-top: 40px;
   width: 360px;
-  height: 616px;
+  height: 615px;
   margin-right: 40px;
   margin-left: 0;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 .gallery-item:nth-child(2n) {
   float: right;
@@ -798,29 +800,41 @@ input.show {
   text-align: center;
   vertical-align: middle;
 }
-.paginator-item a:hover {
+.paginator-item a:hover:not(.active) {
   background-color: #dfdfdf;
 }
-.paginator-item a:active {
+.paginator-item a:active:not(.active) {
   background-color: #d5d5d5;
+  box-shadow: inset 0 3px 0 0 #bfbfbf;
 }
 .paginator-item .active {
   background-color: #fff;
   border: 3px solid #dbdbdb;
 }
-.gallery .next {
-  padding: 16px 87px;
-  width: 105px;
+.paginator-item .btn {
+  padding: 16px 77px;
+  width: 260px;
 }
 .show {
+  display: inline-block;
+  padding: 16px 44px;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 1.125;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #eee;
+  font-size: 
   color: #000;
-  background-color: #eee; 
 }
 .show:hover {
   background-color: #dfdfdf; 
 }
 .show:active {
-  background: rgba(213, 213, 213, 0.3);
+  color: rgba(0,0,0,0.3);
+  background-color: #d5d5d5;
+  box-shadow: inset 0 3px 0 0 #bfbfbf;
 }
 .main {
   margin-bottom: 62px;
@@ -828,6 +842,9 @@ input.show {
 .main-footer {
   margin-top: 82px;
   background-color: #fff;
+}
+.catalog-main-footer {
+  margin-top: 60px;
 }
 img {
   max-width: 100%
@@ -894,6 +911,7 @@ img {
   outline: 1px solid red;
 }
 .social-btn {
+  position: relative;
   display: inline-block;
   width: 78px;
   height: 78px;
@@ -909,15 +927,27 @@ img {
 .social-btn:active {
   background-color: #d7373b;
 }
-.vk {
-  background-image: url("../img/icons/vk-icon.png");
+.vk:before {
+  position: absolute;
+  content: "";
+  top: 29px;
+  left: 26px;
+  width: 26px;
+  height: 17px;
+  background-image: url("../img/sprite/sprite.png");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50% 65%;
 }
-.fb {
-  background-image: url("..img/icons/fb-icon.png");
+.fb:before {
+  position: absolute;
+  content: "";
+  top: 20px;
+  left: 30px;
+  width: 25px;
+  height: 25px;
+  background-image: url("..img/sprite/sprite.png");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50% 80%;
 }
 .inst {
   background-image: url("../img/icons/insta-icon.png");
