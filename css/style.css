@@ -1022,14 +1022,24 @@ img {
   right: -4px;
   width: 26px;
   height: 5px;
-  background-color: #fecccd;
-  border-radius: 1px; 
+  background-color: #fb565a;
+  border-radius: 1px;
+  opacity: 0.3; 
 }
 .modal-content-close::before {
   transform: rotate(45deg);
 }
 .modal-content-close::after {
   transform: rotate(-45deg);
+}
+.modal-content-close:hover::before,
+.modal-content-close:hover::after {
+  background-color: #fb565a;
+  opacity: 1;
+}
+.modal-content-close:active::before,
+.modal-content-close:active::after {
+  opacity: 0.1;
 }
 .write {
   border: none;
