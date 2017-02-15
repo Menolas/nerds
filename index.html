@@ -49,7 +49,7 @@
         <div class="slide slide-expensive">
           <div class="slide-text">
       	    <h2 class="slide-title title-main">Долго, дорого, скрупулезно.</h2>
-      	    <p>Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
+      	    <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
       	    <a class="btn" href="#">Узнать больше</a>
       	  </div>
         </div>  
@@ -170,18 +170,64 @@
           <div class="clearfix">
             <div class="pull-left">
     		      <label for="name-field">Ваше имя:</label>
-    		      <input type="text" name="name" id="name-field" placeholder="Представьтесь,пожалуйста">
+    		      <input type="text" name="name" id="name-field" placeholder="Представьтесь,пожалуйста" required>
             </div>
             <div class="pull-right">
     		      <label for="e-mail-field">Ваш e-mail:</label>
-    		      <input type="email" name="e-mail" id="e-mail-field" placeholder="Для отправки ответа">
+    		      <input type="email" name="e-mail" id="e-mail-field" placeholder="Для отправки ответа" required>
             </div>
           </div>  
     		  <label for="letter-field">Текст письма:</label>
-    		  <textarea name="letter" id="letter-field" placeholder="В свободной форме" rows="5"></textarea>
+    		  <textarea name="letter" id="letter-field" placeholder="В свободной форме" rows="5" required></textarea>
     		  <input type="submit" class="btn" value="Отправить">
     	  </fieldset>
       </form>    
     </div>
+    <script type="text/javascript">
+      var link = document.querySelector(".mail-us .btn");
+      var popup = document.querySelector(".modal-content");
+      var close = popup.querySelector(".modal-content-close");
+
+      var form = popup.querySelector("form");
+      var name = popup.querySelector("[name=name]");
+      var e-mail = popup.querySelector("[name=e-mail]");
+      var storage = localStorage.getItem("name");
+
+
+
+      link.addEventListener("click", function(event) {
+    	event.preventDefault();
+    	popup.classList.add("modal-content-show");
+
+    	 if (storage) {
+          name.value = storage;
+          password.focus();
+        } else {
+    	  name.focus();
+    	} 
+      });
+
+      close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("modal-content-show");
+      });
+
+        form.addEventListener("submit", function(event) {
+          if (!name.value || !e-mail.value) {
+            event.preventDefault();
+            console.log("Нужно ввести логин и пароль"); 
+          }  else {
+             localStorage.setItem("name", name.value);
+        }
+      }); 
+
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (popup.classList.contains("modal-content-show")) {
+            popup.classList.remove("modal-content-show");
+          }
+        }
+      }); 
+    </script>
   </body>
 </html>
