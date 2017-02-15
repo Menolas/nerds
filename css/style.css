@@ -767,12 +767,9 @@ input.show {
 .sorter-item .active {
   opacity: 1;
 }
-.items {
-  font-size: 0;
-}
 .gallery-item {
   position: relative;
-  display: inline-block;
+  float: left;
   padding-top: 40px;
   width: 360px;
   height: 615px;
@@ -781,8 +778,7 @@ input.show {
   margin-bottom: 39px;
 }
 .gallery-item:nth-child(2n) {
-  float: right;
-  margin-right: 0;
+	margin-right: 0;
 }
 .gallery-item::before {
   content: "";
