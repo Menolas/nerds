@@ -496,24 +496,35 @@ img {
   margin-bottom: 45px;
 }
 .logos {
+  margin: 0;
   margin-bottom: 80px;
-  padding-top: 47px;
-  padding-bottom: 45px;
+  padding-top: 45px;
+  padding-bottom: 40px;
   border-top: 2px solid #eee;
   border-bottom: 2px solid #eee;
-  font-size: 0;
+  list-style: none;
 }
-.company-logo {
-  display: inline-block;
+.logos-item{
+  float: left;
   margin-right: 100px;
-  vertical-align: middle;
   opacity: 0.2;
 }
-.company-logo:first-child {
+.logos-item:first-child {
   margin-left: 30px;
+  padding-top: 21px;
+  width: 200px;
 }
-.company-logo:last-child {
+.logos-item:nth-child(2) {
+  width: 207px;
+}
+.logos-item:nth-child(3) {
+  padding-top: 20px;
+  width: 186px;
+}
+.logos-item:last-child {
   margin-right: 0;
+  padding-top: 10px;
+  width: 172px;
 }
 .company-logo:hover {
   opacity: 1;
