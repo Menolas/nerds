@@ -495,8 +495,9 @@ img {
   margin-bottom: 45px;
 }
 .logos {
+  margin-bottom: 80px;
   padding-top: 47px;
-  padding-bottom: 43px;
+  padding-bottom: 45px;
   border-top: 2px solid #eee;
   border-bottom: 2px solid #eee;
   font-size: 0;
@@ -836,6 +837,7 @@ input.show {
   padding: 0;
   margin: 0;
   margin-top: 25px;
+  margin-bottom: 60px;
   list-style: none;
 }
 .paginator-item {
@@ -898,7 +900,7 @@ input.show {
   margin-bottom: 62px;
 }
 .main-footer {
-  margin-top: 82px;
+  margin-top: 69px;
   background-color: #fff;
 }
 .catalog-main-footer {
@@ -1030,12 +1032,34 @@ input.show {
   line-height: 1.37;
   color: #444;
 }
-.pull-left {
-  float: left;
+
+@keyframes bounce {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
-.pull-right {
-  float: right;
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
 }
+
 .modal-content {
   display: none;
   position: absolute;
@@ -1050,6 +1074,10 @@ input.show {
 }
 .modal-content-show {
   display: block;
+  animation: bounce 0.6s;
+}
+.modal-error {
+  animation: shake 0.6s;
 }
  .modal-content-close {
   position: absolute;
@@ -1104,6 +1132,12 @@ input.show {
   font-weight: 700;
   color: #000;
 }
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
 .write input {
   margin-right: 40px;
   width: 360px;
@@ -1115,14 +1149,17 @@ input.show {
   vertical-align: top;
   outline: none;
 }
-.write input[type="text"]:hover {
+.write input[type="text"]:hover,
+.write input[type="email"]:hover {
   border-color: #b4b9bb;
 }
-.write input[type="text"]:focus {
+.write input[type="text"]:focus,
+.write input[type="email"]:focus {
   border-color: #000;
   color: #444;
 }
-.write input[type="text"]:invalid {
+.write input[type="text"]:invalid,
+.write input[type="email"]:invalid {
   border-color: #e74246;
   color: #e74246;
 }
@@ -1157,8 +1194,6 @@ input.show {
   margin-bottom: 0;
   width: 260px;
   font-family: inherit;
-}
-.write .btn:focus {
-  color: rgba(255,255,255,0.3);
+  outline: none;
 }
 
