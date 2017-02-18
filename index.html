@@ -50,7 +50,7 @@
           <div class="slide-text">
       	    <h2 class="slide-title title-main">Долго, дорого, скрупулезно.</h2>
       	    <p>Математически выверенный дизайн<br>
-      	    для вашего сайта или мобильного приложения.</p>
+            для вашего сайта или мобильного приложения</p>
       	    <a class="btn" href="#">Узнать больше</a>
       	  </div>
         </div>  
@@ -64,7 +64,8 @@
         </div>
         <div class="slide slide-night">
       	  <div class="slide-text">
-      	    <h2 class="slide-title title-main">Только ночь, только хардкор</h2>
+      	    <h2 class="slide-title title-main">Только ночь,<br>
+            только хардкор</h2>
       	    <p>Работать днем как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
             <a class="btn" href="#">Узнать больше</a>
       	  </div>
@@ -129,10 +130,18 @@
         </div>
       </div>  
       <div class="logos clearfix">
-      	<img class="company-logo" src="img/content/htmlacademy-logo.png" width="200" height="68" alt="HTML Academy">
-      	<img class="company-logo" src="img/content/borodinski-logo.png" width="207" height="90" alt="BORODINSKI">
-        <img class="company-logo" src="img/content/pink-logo.png" width="186" height="51" alt="Pink">
-        <img class="company-logo" src="img/content/mishka-logo.png" width="172" height="84" alt="MISHKA">
+        <a href="#">
+      	  <img class="company-logo" src="img/content/htmlacademy-logo.png" width="200" height="68" alt="HTML Academy">
+        </a>
+        <a href="#">
+      	  <img class="company-logo" src="img/content/borodinski-logo.png" width="207" height="90" alt="BORODINSKI">
+        </a>
+        <a href="#">
+          <img class="company-logo" src="img/content/pink-logo.png" width="186" height="51" alt="Pink">
+        </a>
+        <a href="#">
+          <img class="company-logo" src="img/content/mishka-logo.png" width="172" height="84" alt="MISHKA">
+        </a>
       </div>
 
     </main>
@@ -171,64 +180,18 @@
           <div class="clearfix">
             <div class="pull-left">
     		      <label for="name-field">Ваше имя:</label>
-    		      <input type="text" name="name" id="name-field" placeholder="Представьтесь,пожалуйста" required>
+    		      <input type="text" name="name" id="name-field" placeholder="Представьтесь,пожалуйста">
             </div>
             <div class="pull-right">
     		      <label for="e-mail-field">Ваш e-mail:</label>
-    		      <input type="email" name="e-mail" id="e-mail-field" placeholder="Для отправки ответа" required>
+    		      <input type="email" name="e-mail" id="e-mail-field" placeholder="Для отправки ответа">
             </div>
           </div>  
     		  <label for="letter-field">Текст письма:</label>
-    		  <textarea name="letter" id="letter-field" placeholder="В свободной форме" rows="5" required></textarea>
+    		  <textarea name="letter" id="letter-field" placeholder="В свободной форме" rows="5"></textarea>
     		  <input type="submit" class="btn" value="Отправить">
     	  </fieldset>
       </form>    
     </div>
-    <script type="text/javascript">
-      var link = document.querySelector(".mail-us .btn");
-      var popup = document.querySelector(".modal-content");
-      var close = popup.querySelector(".modal-content-close");
-
-      var form = popup.querySelector("form");
-      var name = popup.querySelector("[name=name]");
-      var e-mail = popup.querySelector("[name=e-mail]");
-      var storage = localStorage.getItem("name");
-
-
-
-      link.addEventListener("click", function(event) {
-    	event.preventDefault();
-    	popup.classList.add("modal-content-show");
-
-    	 if (storage) {
-          name.value = storage;
-          password.focus();
-        } else {
-    	  name.focus();
-    	} 
-      });
-
-      close.addEventListener("click", function(event) {
-        event.preventDefault();
-        popup.classList.remove("modal-content-show");
-      });
-
-        form.addEventListener("submit", function(event) {
-          if (!name.value || !e-mail.value) {
-            event.preventDefault();
-            console.log("Нужно ввести логин и пароль"); 
-          }  else {
-             localStorage.setItem("name", name.value);
-        }
-      }); 
-
-      window.addEventListener("keydown", function(event) {
-        if (event.keyCode === 27) {
-          if (popup.classList.contains("modal-content-show")) {
-            popup.classList.remove("modal-content-show");
-          }
-        }
-      }); 
-    </script>
   </body>
 </html>
