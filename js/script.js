@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 (function() {
   var link = document.querySelector(".mail-us .btn");
@@ -15,14 +15,6 @@
   link.addEventListener("click", function(event) {
     event.preventDefault();
     popup.classList.add("modal-content-show");
-    
-    if (storage) {
-      name.value = storage
-      email.focus();
-    } else {
-      name.focus();	
-    }
-    
   });
 
   close.addEventListener("click", function(event) {
@@ -32,23 +24,21 @@
   });
 
   form.addEventListener("submit", function(event) {
-  	 if (!name.value || !email.value) {
-        event.preventDefault();
-        console.log("Нужно ввести имя и e-mail");
-        popup.classList.add("modal-error");
-      } else {
-          localStorage.setItem("name", name.value);
-        }
-    });
+  	if (!name.value || !email.value) {
+      event.preventDefault();
+      popup.classList.add("modal-error");
+    } else {
+      localStorage.setItem("name", name.value);
+    }
+  });
 
-  window.addEventListener("keydown", function(event)
-  	  {
-  	 if (event.keyCode === 27) {
-  	   if (popup.classList.contains("modal-content-show")) {
-  	     popup.classList.remove("modal-content-show");
-  	     popup.classList.remove("modal-error");
+  window.addEventListener("keydown", function(event) {
+  	if (event.keyCode === 27) {
+  	  if (popup.classList.contains("modal-content-show")) {
+  	    popup.classList.remove("modal-content-show");
+  	    popup.classList.remove("modal-error");
 
-  	     }
-  	   }
-  	   });   	
-  })();
+  	  }
+  	}
+  });   	
+})();

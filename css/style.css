@@ -4,6 +4,7 @@
   box-sizing: border-box; 
 }
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   min-width: 1200px;
@@ -1063,6 +1064,7 @@ input.show {
 .modal-content {
   display: none;
   position: absolute;
+  bottom: 180px;
   left: 50%;
   margin-left: -480px;
   width: 960px;
