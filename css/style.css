@@ -1064,7 +1064,7 @@ input.show {
 .modal-content {
   display: none;
   position: absolute;
-  bottom: 180px;
+  bottom: 145px;
   left: 50%;
   margin-left: -480px;
   width: 960px;
