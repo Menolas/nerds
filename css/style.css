@@ -1039,7 +1039,6 @@ input.show {
 .modal-content {
   display: none;
   position: absolute;
-  top: 120px;
   left: 50%;
   margin-left: -480px;
   width: 960px;
@@ -1047,7 +1046,10 @@ input.show {
   color: #000;
   background-color: #fff;
   box-shadow: 0 30px 50px rgba(0,0,0,0.7);
-  z-index: 1; 
+  z-index: 10; 
+}
+.modal-content-show {
+  display: block;
 }
  .modal-content-close {
   position: absolute;
@@ -1059,6 +1061,7 @@ input.show {
   background-color: #fff;
   border: 0; 
   cursor: pointer;
+  outline: none;
 }
 .modal-content-close::before,
 .modal-content-close::after {
@@ -1112,14 +1115,14 @@ input.show {
   vertical-align: top;
   outline: none;
 }
-.write input:hover {
+.write input[type="text"]:hover {
   border-color: #b4b9bb;
 }
-.write input:focus {
+.write input[type="text"]:focus {
   border-color: #000;
   color: #444;
 }
-.write input:invalid {
+.write input[type="text"]:invalid {
   border-color: #e74246;
   color: #e74246;
 }
@@ -1153,5 +1156,9 @@ input.show {
   margin-top: 40px;
   margin-bottom: 0;
   width: 260px;
+  font-family: inherit;
+}
+.write .btn:focus {
+  color: rgba(255,255,255,0.3);
 }
 
