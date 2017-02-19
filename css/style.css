@@ -1154,6 +1154,11 @@ input.show {
   border: 7px solid white;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
+.modal-content-map iframe {
+  width: 766px;
+height: 561px;
+border: none;
+}
 .modal-content-show {
   display: block;
   animation: bounce 0.6s;
