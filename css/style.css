@@ -354,7 +354,13 @@ img {
 }
 .advantage p {
   margin-bottom: 32px;
-  width: 243px;
+  width: 247px;
+}
+.advantage .btn {
+  outline: none;
+}
+.advantage-web .btn:active {
+  box-shadow: inset 0 3px 0 0 #c13135;
 }
 .advantage-apps .btn {
   background-color: #00ca74;
@@ -364,6 +370,7 @@ img {
 }
 .advantage-apps .btn:active {
   background-color: #00aa62;
+  box-shadow: inset 0 3px 0 0 #009958;
 }
 .advantage-presentation .btn {
   background-color: #efc84a;
@@ -373,6 +380,7 @@ img {
 }
 .advantage-presentation .btn:active {
   background-color: #e5a722;
+  box-shadow: inset 0 3px 0 0 #ce961f;
 }
 .promo-text {
   float: left;
@@ -489,6 +497,7 @@ img {
   padding-bottom: 43px;
   border-top: 2px solid #eee;
   border-bottom: 2px solid #eee;
+  font-size: 0;
 }
 .company-logo {
   display: inline-block;
@@ -816,6 +825,9 @@ input.show {
 }
 .gallery-item:hover .description {
   display: block;
+}
+.gallery-item:hover {
+  box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
 }
 .paginator {
   padding: 0;
