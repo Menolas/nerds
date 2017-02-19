@@ -65,6 +65,8 @@ img {
 .btn:active {
   color: rgba(255,255,255,0.3);
   background-color: #d7373b;
+  box-shadow: inset 0 3px 0 0 #c13135;
+  outline: none;
 }
 .main-header {
   padding: 0;
@@ -709,6 +711,7 @@ input.show {
   padding: 16px 87px; 
   border: none;
   font-family: inherit;
+  outline: none;
 }
 .gallery {
   float: right;
