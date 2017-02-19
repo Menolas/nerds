@@ -504,10 +504,13 @@ img {
   border-bottom: 2px solid #eee;
   list-style: none;
 }
-.logos-item{
+.logos-item {
   float: left;
   margin-right: 100px;
   opacity: 0.2;
+}
+.logos-item:hover {
+  opacity: 1;
 }
 .logos-item:first-child {
   margin-left: 30px;
