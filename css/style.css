@@ -264,7 +264,7 @@ img {
   padding: 16px 52px;
 }
 .slide-expensive {
-  display: block;
+  display: none;
   padding-top: 55px;
   padding-bottom: 80px;
   background-image: url("../img/content/slide1.png");
