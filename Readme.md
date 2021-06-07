@@ -1,10 +1,10 @@
 # Nerds
 studying project (HTML&CSS basic - HTML Academy)
 
-* Студент: [Елена Кунина](https://up.htmlacademy.ru/htmlcss/16/user/234524).
-* Наставник: [Макс Масленко](https://htmlacademy.ru/profile/biggus-dickus).
+* Student: [Елена Кунина](https://up.htmlacademy.ru/htmlcss/16/user/234524).
+* Mentor: [Макс Масленко](https://htmlacademy.ru/profile/biggus-dickus).
 
-vew on github pages https://github.com/Menolas/nerds/settings/pages
+vew on github pages https://menolas.github.io/nerds/
 ---
 
 ## Description
