@@ -10,9 +10,8 @@ vew on github pages https://menolas.github.io/nerds/
 ## Description
 
 My first project, done on my first intencive cours HTML/CSS in HTML Academy
-Репозиторий создан для обучения на интенсивном онлайн‑курсе «[Базовый HTML и CSS](https://htmlacademy.ru/intensive/htmlcss)» от [HTML Academy](https://htmlacademy.ru).
 
- Here I practiced in markuping and styling
+Here I practiced in markuping and styling
 
 ## How to deploy
 1. Clone the project from Github.
